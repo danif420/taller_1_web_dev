@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block section %}
+  <h2>
+      {{ object.titulo }}
+  </h2>
+  <a href="{% url "album-update" object.id %}" class="btn btn-success">edit</a>
+  <a href="{% url "album-delete" object.id %}" class="btn btn-danger">delete</a> 
+  <hr>
+{% endblock section %}
+
+{% block maincontent %}
+<div>
+<div>
+    <img src="{% static object.photo.url %}" style="width:250px;height:330px" />
+</div>
+</div>
+{% endblock maincontent %}

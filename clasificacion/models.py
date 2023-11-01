@@ -38,7 +38,6 @@ class Cancion(models.Model):
     
 class Genero(models.Model):
     nombre = models.CharField(max_length=50)
-    fecha = models.DateField()
     
     def get_absolute_url(self):
         return reverse('genero-list')

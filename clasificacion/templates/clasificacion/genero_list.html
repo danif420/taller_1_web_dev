@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block section %}
+    <h2 class="text-center">Generos Musicales</h2>
+    <hr>
+{% endblock section %}
+
+{% block maincontent %}
+    <div class="container">
+        <table class="table table-bordered table-striped text-center">
+            <tbody>
+                {% for genero in object_list %}
+                    <tr>
+                        <td>{{ genero.nombre }}</td>
+                        <td>
+                            <a href="{% url 'genero-update' genero.pk %}" class="btn btn-primary">
+                                <i class="fas fa-pencil-alt"></i>
+                            </a>
+                            <a href="{% url 'genero-delete' genero.pk %}" class="btn btn-danger">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock maincontent %}

@@ -22,6 +22,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('cancion/', views.CancionListView.as_view(), name='cancion-list'),
     path('cancion/<int:pk>/detail/', views.CancionDetailView.as_view(), name='cancion-detail'),
+    path('genero/', views.GeneroListView.as_view(), name='genero-list'),
+    path('genero/<int:pk>/detail/', views.GeneroDetailView.as_view(), name='genero-detail'),
+    path('album/', views.AlbumListView.as_view(), name='album-list'),
+    path('album/<int:pk>/detail/', views.AlbumDetailView.as_view(), name='album-detail'),
+    path('artista/', views.ArtistaListView.as_view(), name='artista-list'),
+    path('artista/<int:pk>/detail/', views.ArtistaDetailView.as_view(), name='artista-detail'),
     # Update
     path('cancion/<int:pk>/update/',views.CancionUpdate.as_view(),name='cancion-update'), 
     #Create
