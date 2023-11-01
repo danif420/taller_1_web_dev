@@ -16,7 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from clasificacion import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('cancion/', views.CancionListView.as_view(), name='cancion-list'),
+    path('cancion/<int:pk>/detail/', views.CancionDetailView.as_view(), name='cancion-detail'),
+    # Update
+    path('cancion/<int:pk>/update/',views.CancionUpdate.as_view(),name='cancion-update'), 
+    #Create
+    path('cancion/create/', views.CancionCreate.as_view(), name='cancion-create'),
+    #Delete
+    path('cancion/<int:pk>/delete/', views.CancionDelete.as_view(), name='cancion-delete'),
 ]
