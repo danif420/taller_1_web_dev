@@ -17,4 +17,7 @@
     <img src="{% static object.photo.url %}" style="width:250px;height:330px" />
 </div>
 </div>
+{% for p in object.get_cancion.all %}
+  <h1>{{p.titulo}} - </h1>
+{%endfor%}
 {% endblock maincontent %}

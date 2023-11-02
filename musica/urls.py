@@ -34,4 +34,10 @@ urlpatterns = [
     path('cancion/create/', views.CancionCreate.as_view(), name='cancion-create'),
     #Delete
     path('cancion/<int:pk>/delete/', views.CancionDelete.as_view(), name='cancion-delete'),
+    # Update
+    path('album/<int:pk>/update/',views.AlbumUpdate.as_view(),name='album-update'), 
+    #Create
+    path('album/create/', views.AlbumCreate.as_view(), name='album-create'),
+    #Delete
+    path('album/<int:pk>/delete/', views.AlbumDelete.as_view(), name='album-delete'),
 ]

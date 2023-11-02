@@ -15,11 +15,6 @@
                     <div class="panel-heading">
                         <h3 class="panel-title">{{ p.titulo }}</h3>
                     </div>
-                    <div class="panel-body" align="center">
-                        <a href="{% url "cancion-detail" p.id %}">
-                            <img src="{% static p.photo.url %}" style="width:170px;height:200px;"/>
-                        </a>
-                    </div>
                 </div>
             </div>
         {% endfor %}

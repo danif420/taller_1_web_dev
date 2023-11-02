@@ -27,7 +27,7 @@ class Album(models.Model):
     
 class Cancion(models.Model):
     album = models.ForeignKey('Album', on_delete=models.PROTECT,related_name='get_cancion')
-    genero = models.ForeignKey('Genero', on_delete=models.PROTECT,related_name='get_cancion')
+    genero = models.ForeignKey('Genero', on_delete=models.PROTECT,related_name='get_genero')
     titulo = models.CharField(max_length=50)
     
     def get_absolute_url(self):

@@ -56,3 +56,18 @@ class GeneroDelete(DeleteView):
     model = Genero
     template_name = 'genero_confirm_delete.html'  
     success_url = reverse_lazy('genero_list')
+
+class AlbumUpdate(UpdateView):
+    model = Album
+    template_name = 'album_form.html'  
+    fields = '_all_',
+
+class AlbumCreate(CreateView):
+    model = Album
+    template_name = 'album_form.html'  
+    fields = '_all_'
+
+class AlbumDelete(DeleteView):
+    model = Album
+    template_name = 'album_confirm_delete.html'  
+    success_url = reverse_lazy('Album_list')
