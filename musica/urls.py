@@ -46,4 +46,10 @@ urlpatterns = [
     path('genero/create/', views.GeneroCreate.as_view(), name='genero-create'),
     #Delete
     path('genero/<int:pk>/delete/', views.GeneroDelete.as_view(), name='genero-delete'),
+    # Update
+    path('artista/<int:pk>/update/',views.ArtistaUpdate.as_view(),name='artista-update'), 
+    #Create
+    path('artista/create/', views.ArtistaCreate.as_view(), name='artista-create'),
+    #Delete
+    path('artista/<int:pk>/delete/', views.ArtistaDelete.as_view(), name='artista-delete'),
 ]

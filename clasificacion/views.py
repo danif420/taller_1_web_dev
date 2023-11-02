@@ -71,3 +71,18 @@ class AlbumDelete(DeleteView):
     model = Album
     template_name = 'album_confirm_delete.html'  
     success_url = reverse_lazy('Album_list')
+
+class ArtistaUpdate(UpdateView):
+    model = Artista
+    template_name = 'artista_form.html'  
+    fields = '_all_'
+
+class ArtistaCreate(CreateView):
+    model = Artista
+    template_name = 'artista_form.html'  
+    fields = '_all_'
+
+class ArtistaDelete(DeleteView):
+    model = Artista
+    template_name = 'artista_confirm_delete.html'  
+    success_url = reverse_lazy('artista_list')
