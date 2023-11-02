@@ -60,7 +60,7 @@ class GeneroDelete(DeleteView):
 class AlbumUpdate(UpdateView):
     model = Album
     template_name = 'album_form.html'  
-    fields = '_all_',
+    fields = '_all_'
 
 class AlbumCreate(CreateView):
     model = Album
