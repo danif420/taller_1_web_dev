@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block section %}
+    <h2>Canciones</h2>
+    <hr>
+{% endblock section %}
+
+{% block maincontent %}
+    <div class="row well">
+        {% for p in object_list.all %}
+            <div class="col-md-3 well">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">{{ p.titulo }}</h3>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock maincontent %}
