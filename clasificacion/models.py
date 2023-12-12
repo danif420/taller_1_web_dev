@@ -13,6 +13,9 @@ class Artista(models.Model):
     def __str__(self):
         return self.nombre
 
+    def get_absolute_url(self):
+        return reverse('artista-list')
+
 class Album(models.Model):
     artista = models.ForeignKey('Artista', on_delete=models.PROTECT,related_name='get_album' )
     titulo = models.CharField(max_length=50)

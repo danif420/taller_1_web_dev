@@ -8,15 +8,18 @@
 {% endblock section %}
 
 {% block maincontent %}
-    <div class="row well">
+    <div class="row well" style="margin: 50px;">
         {% for p in object_list.all %}
-            <div class="col-md-3 well">
+            
+            <a href="{% url "cancion-detail" p.id %}">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h3 class="panel-title">{{ p.titulo }}</h3>
+                        <h5 class="panel-title">{{ p.album }}</h5>
+                        <h5 class="panel-title">{{ p.genero }}</h5>
                     </div>
                 </div>
-            </div>
+            </a>
         {% endfor %}
     </div>
 {% endblock maincontent %}
